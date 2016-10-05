@@ -38,3 +38,43 @@
     </div>
   </div>
 </div>
+
+<!-- A Restaurant has many reviews -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Reviews
+      </li>
+
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item">
+          <a href="/reviews/<%= review.id %>">
+            <%= review.restaurant_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A Restaurant has many tagtorestaurants -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Tagtorestaurants
+      </li>
+
+      <% @restaurant.tagtorestaurants.each do |tagtorestaurant| %>
+        <li class="list-group-item">
+          <a href="/tagtorestaurants/<%= tagtorestaurant.id %>">
+            <%= tagtorestaurant.restaurant_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

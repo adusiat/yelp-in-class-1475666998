@@ -23,3 +23,43 @@
     </div>
   </div>
 </div>
+
+<!-- A User has many reviews -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Reviews
+      </li>
+
+      <% @user.reviews.each do |review| %>
+        <li class="list-group-item">
+          <a href="/reviews/<%= review.id %>">
+            <%= review.restaurant_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many tags -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Tags
+      </li>
+
+      <% @user.tags.each do |tag| %>
+        <li class="list-group-item">
+          <a href="/tags/<%= tag.id %>">
+            <%= tag.restaurant_id %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
