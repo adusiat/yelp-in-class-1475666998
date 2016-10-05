@@ -19,7 +19,7 @@
       <tr>
         <td><%= tag.restaurant_id %></td>
         <td><%= tag.user.name %></td>
-        <td><%= tag.wordtag %></td>
+        <td><%= tag.wordtag.restaurant_id %></td>
         <td>
           <a href="/tags/<%= tag.id %>" class="btn btn-primary">Show</a>
           <a href="/tags/<%= tag.id %>/edit" class="btn btn-warning">Edit</a>
