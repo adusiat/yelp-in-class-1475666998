@@ -42,7 +42,7 @@
           Wordtag
         </label>
 
-        <input type="text" id="wordtag" name="wordtag" placeholder="Wordtag" class="form-control" value="<%= @tag.wordtag %>">
+        <%= select_tag(:wordtag, options_from_collection_for_select(Tagtorestaurant.all, :id, :restaurant_id, @tag.wordtag), :class => "form-control") %>
       </div>
 
       <button class="btn btn-success">
